@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @title = 'デイトラ'
+    @article = Article.find(6)
   end
 
   def about
