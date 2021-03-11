@@ -8,12 +8,16 @@
     </div>
   </div>
 
-
-  <div class="card">
+   <%= @articles.each do |article| %>
+   <%= link_to article_path(id: article.id) do %>
+   <div class="card">
     <div class="card_image">
       <%= image_tag 'eyecatch1.png' %>
     </div>
     <div class="card_content">
+      <div class="card-title">
+      <%= article.title %>
+      </div>
       <div class="card_heart">
         <%= image_tag 'heart.svg' %>
         <span>23</span>
@@ -27,6 +31,10 @@
       </div>
     </div>
   </div>
+  <% end %>
+   <% end %>
+
+  
 
   <div class="card">
     <div class="card_image">
