@@ -27,6 +27,16 @@ class ArticlesController < ApplicationController
     # idを取得。viewに渡すために＠にしておく
   end
 
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to article_path(@article), notice: '更新できました'
+    else
+      flash.now[:error] = '更新できませんでした'
+      render :edit
+    end
+  end
+
   private
   def article_params
     params.require(:article).permit(:title, :content)
