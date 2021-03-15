@@ -22,6 +22,11 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def edit
+    @article = Article.find(params[:id])
+    # idを取得。viewに渡すために＠にしておく
+  end
+
   private
   def article_params
     params.require(:article).permit(:title, :content)
