@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
   end
   # 記事の下にコメントがあるような関係の時には入子構造にしてみる
+
+  resource :profile, only: [:show, :edit, :update]
 end
