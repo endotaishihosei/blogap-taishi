@@ -14,6 +14,8 @@
 #
 class Comment < ApplicationRecord
 
-  belomgs_to :article, dependent: :destroy
+  belongs_to :article, dependent: :destroy
   # dependent: :destroy => 記事が削除されたらコメントも同時に削除されるというメソッド
+
+  validates :content, presence: true
 end
