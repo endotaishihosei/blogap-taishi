@@ -8,12 +8,14 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @comments = @article.comments
   end
 
   def new
     # @article = Article.new
     # userと紐づけるための変更
     @article = current_user.articles.build
+    # current_user => サインインしているユーザを取得するdeviseヘルパーメソッド
   end
 
   def create
