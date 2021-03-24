@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
     # @article = Article.new
     # userと紐づけるための変更
     @article = current_user.articles.build
+    # current_user => サインインしているユーザを取得するdeviseヘルパーメソッド
   end
 
   def create
