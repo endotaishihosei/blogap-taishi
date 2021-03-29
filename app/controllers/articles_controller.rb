@@ -31,6 +31,7 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = current_user.articles.find(params[:id])
+    # articlesと複数形 => modelsでhas_manyとしているため
   end
 
   def update
