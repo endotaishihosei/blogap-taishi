@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments, only: [:new, :create]
 
-    resource :like, only: [:create]
+    resource :like, only: [:create, :destroy]
   end
   # 記事の下にコメントがあるような関係の時には入子構造にしてみる
 
