@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # 記事の下にコメントがあるような関係の時には入子構造にしてみる
 
   resource :profile, only: [:show, :edit, :update]
+  resources :favorites, only: [:index]
 end
