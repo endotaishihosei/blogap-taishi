@@ -33,7 +33,7 @@ class User < ApplicationRecord
   end
 
   def has_liked?(article)
-    likes.exist?(article_id: article.id)
+    likes.exists?(article_id: article.id)
   end
 
   # cohki0305@gmail.com
