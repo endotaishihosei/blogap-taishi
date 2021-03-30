@@ -32,6 +32,10 @@ class Article < ApplicationRecord
     I18n.l(self.created_at, formar: :default)
   end
 
+  def like_count
+    likes.count
+  end
+
   def author_name
     user.display_name
   end
