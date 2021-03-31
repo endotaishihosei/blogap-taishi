@@ -1,0 +1,16 @@
+{
+  "name": "blog ap",
+  "description": "This is blogap",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/endotaishihosei/blogap-taishi",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
