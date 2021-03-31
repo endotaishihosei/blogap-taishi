@@ -27,6 +27,7 @@ gem 'hamlit'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'devise'
+gem 'aws-sdk-s3', require: false
 
 
 # Use Active Storage variant
